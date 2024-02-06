@@ -1,0 +1,62 @@
+body {
+  background-color: black;
+  color:white;
+  text-align: center;
+}
+
+.board-container {
+  margin: auto;
+}
+
+table td div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.cell {
+  font-size: 1.2rem;
+  width: 43px;
+  height: 43px;
+}
+
+.wall {
+  font-size: 1.2rem;
+  width: 43px;
+  height: 43px;
+  background-color: rgb(7, 107, 195);
+}
+
+.ghost-1 {
+  background-color: red;
+}
+
+.ghost-2 {
+  background-color: rgb(52, 216, 241);
+}
+
+.ghost-3 {
+  background-color: rgb(255, 196, 0);
+}
+
+.activated {
+  background-color: blue;
+}
+
+.modal {
+  background-color: black;
+  border: 5px solid white;
+  width: 300px;
+  padding: 20px;
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 175px);
+}
+
+.hide {
+  display: none;
+}
+
+.restart-btn {
+  background-color: rgb(7, 107, 195);
+}
