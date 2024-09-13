@@ -60,7 +60,9 @@ function moveGhost(ghost) {
     // DONE: hitting a pacman? call gameOver
     if (nextCell === PACMAN) {
         if (gPacman.isSuper) {
-            removeGhost(nextLocation)
+            removeGhost(ghost.location)
+            renderCell(ghost.location, ghost.currCellContent)
+            return
         } else {
             gBoard[ghost.location.i][ghost.location.j] = ghost.currCellContent
             renderCell(ghost.location, ghost.currCellContent)
