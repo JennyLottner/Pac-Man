@@ -1,6 +1,6 @@
 'use strict'
 
-const WALL = '⬛'
+const WALL = ''
 const FOOD = '.'
 const EMPTY = ' '
 const SUPER_FOOD = '🥦'
@@ -28,7 +28,7 @@ function onInit() {
 }
 
 function buildBoard() {
-    const size = 10
+    const size = 12
     const board = []
 
     for (var i = 0; i < size; i++) {
@@ -39,7 +39,9 @@ function buildBoard() {
 
             if (i === 0 || i === size - 1 ||
                 j === 0 || j === size - 1 ||
-                (j === 3 && i > 4 && i < size - 2)) {
+                (j === 3 && i > 4 && i < size - 3) ||
+                (j === 7 && i > 2 && i < size - 6) ||
+                (i === size - 4 && j > 6 && j < size)) {
                 board[i][j] = WALL
             } else if ((i === 1 && (j === 1 || j === size - 2)) ||
                 (i === size - 2 && (j === 1 || j === size - 2))) {
