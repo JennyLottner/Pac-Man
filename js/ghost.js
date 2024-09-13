@@ -105,7 +105,6 @@ function removeGhost(nextLocation) {
     for (var i = 0; i < gGhosts.length; i++) {
         if (nextLocation.i === gGhosts[i].location.i &&
             nextLocation.j === gGhosts[i].location.j) {
-            console.log('gRemovedGhosts:', gRemovedGhosts)
             gRemovedGhosts.push(gGhosts.splice(i, 1)[0])
         }
     }
